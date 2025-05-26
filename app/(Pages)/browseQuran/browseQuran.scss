@@ -1,0 +1,43 @@
+@use "../../assets/color" as *;
+
+%head {
+  background-color: $main-color;
+  border-radius: 10px 10px 10px 0;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+  padding: 5px 10px;
+  box-shadow: 0 2px 8px 0 rgba(20, 170, 226, 0.47058823529411764);
+}
+
+.browseQuran {
+  overflow: hidden;
+  > span {
+    // width: 10%;
+    @extend %head;
+    // @media (max-width: 991px) {
+    //   width: 50%;
+    // }
+    //   @media (max-width: 768px) {
+    //   width: fit-content;
+    // }
+  }
+  .filter-box {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+   z-index: 200000;
+    position: relative;
+    > div {
+      width:calc(33.333333% - 8px);
+      
+      @media (max-width:768px) {
+        width:100%;
+      }
+    }
+  }
+
+}

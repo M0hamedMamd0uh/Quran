@@ -1,0 +1,99 @@
+@use "../../assets/color" as * ;
+.navbar {
+  position: sticky !important;
+  top: 0;
+    z-index: 999999;
+  background-color: #fff;
+  padding: 5px;
+  .navbar-brand {
+    img {
+      margin-right: 7px;
+    }
+    font-weight: 600;
+    font-size: 28px;
+    color: $main-color;
+    transition:.5s;
+    &:hover {
+      
+      color: $hover-main-color;
+    }
+  }
+  .navbar-toggler {
+    border-radius: 2px;
+    font-size: 16px;
+    padding:3px 7px;
+    &:focus {
+      box-shadow: 0 0 4px 4px #ececec;
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      width: 100%;
+      justify-content: flex-end;
+      gap: 2%;
+      li {
+        display: flex;
+        align-items: center;
+        @media (max-width: 991px) {
+          margin-bottom: 8px;
+        }
+        &:first-child {
+          width: 40%;
+          position: relative;
+          @media (max-width: 991px) {
+            width: 100%;
+            margin-top: 10px;
+          }
+          input {
+            border-radius: 10px 10px 10px 0;
+            padding: 8px 10px;
+            padding-right: 35px;
+            &:focus {
+              box-shadow: 0 0 4px 4px #f4f3f3;
+              border-color: #dedede;
+            }
+          }
+          .search-logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            color: #555;
+          }
+        }
+        &.radio-live {
+          
+          padding: 5px 15px;
+          border-radius: 10px 10px 10px 0;
+          transition: 0.5s;
+          // background-color: #fb4a59;
+          // box-shadow: 0 2px 8px 0 rgba(228, 76, 89, 0.47058823529411764);
+          background-color: $main-color;
+          box-shadow: 0 2px 8px 0 rgba(20, 170, 226, 0.4705882353);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          @media (max-width: 991px) {
+            padding: 8px 0;
+          }
+          &:hover {
+            // background-color: rgb(56, 193, 114);
+            // box-shadow: 0 2px 8px 0 rgba(56, 193, 114, 0.47058823529411764);
+
+              background-color: #fb4a59;
+          box-shadow: 0 2px 8px 0 rgba(228, 76, 89, 0.47058823529411764);
+            svg {
+              color: #fff;
+            }
+          }
+          svg {
+            font-size: 25px;
+            transition: 0.5s;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

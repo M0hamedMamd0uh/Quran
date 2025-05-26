@@ -1,0 +1,56 @@
+@use "../../assets/color" as *;
+
+%head {
+  background-color: $main-color;
+  border-radius: 10px 10px 10px 0;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+  padding: 5px 10px;
+  box-shadow: 0 2px 8px 0 rgba(20, 170, 226, 0.47058823529411764);
+}
+.radio {
+  > span {
+    // width: 10%;
+    @extend %head;
+    // @media (max-width: 991px) {
+    //   width: 50%;
+    // }
+    //     @media (max-width: 768px) {
+    //   width: fit-content;
+    // }
+  }
+  .reciter-radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    color: $main-color;
+    box-shadow: 0 2px 8px 0 hsla(0, 0%, 63.5%, 0.18823529411764706);
+    transition: 0.5s;
+    width: 100%;
+    border-radius: 10px 10px 10px 0;
+    .radio-name {
+      transition: 0.5s;
+      &:hover {
+        color: $third-color;
+      }
+    }
+    .surah_player {
+      color: #fff;
+      font-weight: 400;
+      font-size: 16px;
+      width: 35px;
+      height: 35px;
+      background-color: $third-color;
+      transition: 0.5s;
+      &:hover {
+        background-color: $hover-third-color;
+      }
+    }
+  }
+}

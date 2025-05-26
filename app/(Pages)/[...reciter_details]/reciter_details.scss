@@ -1,0 +1,50 @@
+@use "../../assets/color" as *;
+
+.reciter_details {
+  .surah {
+    background-color: #fff;
+    padding: 15px;
+    // border-radius: 7px;
+    border-radius: 10px 10px 10px 0;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    &:hover {
+      .surah_num {
+        background-color: $hover-main-color !important;
+      }
+      .surah_name {
+        color: $hover-main-color;
+      }
+    }
+    .sura_head {
+      margin-bottom: 15px;
+      justify-content: space-between;
+      .surah_num {
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        width: 35px;
+        height: 35px;
+        background-color: $main-color;
+        transition: 0.5s;
+      }
+      .surah_player {
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+        width: 35px;
+        height: 35px;
+        background-color: $third-color;
+        transition: 0.5s;
+         &:hover {
+          background-color: $hover-third-color;
+         }
+      }
+    }
+    .surah_name {
+      color: $main-color;
+      transition: 0.5s;
+    }
+  }
+}

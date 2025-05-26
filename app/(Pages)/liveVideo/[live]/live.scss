@@ -1,0 +1,15 @@
+@use "../../../assets/color" as *;
+
+.live {
+  // height: calc(100vh - (54px + 60px + 40px));
+  background-color: #fff !important;
+  border-radius: 7px;
+  h2 {
+    color: $main-color;
+  }
+  video {
+    background-color: #f4f4f4;
+    border-radius: 7px;
+    
+  }
+}
